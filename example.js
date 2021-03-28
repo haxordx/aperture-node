@@ -10,7 +10,10 @@ async function main() {
   console.log('Video codecs:', aperture.videoCodecs);
 
   console.log('Preparing to record for 5 seconds');
-  await recorder.startRecording();
+  await recorder.startRecording({
+    videoCodec: 'h264',
+    scaleFactor: 0.5
+  });
   console.log('Recording started');
   await recorder.isFileReady;
   console.log('File is ready');
