@@ -46,7 +46,8 @@ class Aperture {
     highlightClicks = false,
     screenId = 0,
     audioDeviceId = undefined,
-    videoCodec = undefined
+    videoCodec = undefined,
+    scaleFactor = 1
   } = {}) {
     this.processId = getRandomId();
 
@@ -80,7 +81,8 @@ class Aperture {
         showCursor,
         highlightClicks,
         screenId,
-        audioDeviceId
+        audioDeviceId,
+        scaleFactor
       };
 
       if (cropArea) {
